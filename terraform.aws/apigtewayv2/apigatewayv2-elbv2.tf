@@ -73,7 +73,7 @@ resource "aws_instance" "aws_ec2_instance_sac_default" {
 }
 
 resource "aws_kms_key" "ec2_instance_kms_key_default" {
-  description             = "Instance-key"
+  description             = "some_secure_value_to_check_for"
   deletion_window_in_days = 10
 }
 
