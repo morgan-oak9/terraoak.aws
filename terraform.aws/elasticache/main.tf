@@ -8,6 +8,7 @@ resource "aws_elasticache_cluster" "sac_memcached_cluster" {
   num_cache_nodes      = 2
   parameter_group_name = "default.memcached1.6"
   port                 = 11211
+  # oak9: Avoid using default ports
   subnet_group_name = aws_elasticache_subnet_group.elasticache_subnet_group.name
   az_mode = "single-az"
 }
