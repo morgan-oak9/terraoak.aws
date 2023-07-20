@@ -13,6 +13,7 @@ resource "aws_elasticache_cluster" "sac_memcached_cluster" {
 }
 
 resource "aws_elasticache_cluster" "sac_redis_cluster" {
+  # oak9: Define a security group for ElastiCache Cluster
   # oak9: Define asset inventory tags
   cluster_id           = "sac-testing-redis-cluster"
   engine               = "redis"
