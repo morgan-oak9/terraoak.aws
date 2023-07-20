@@ -2,6 +2,7 @@
 # CloudFront
 # ---------------------------------------------------------------------
 resource "aws_cloudfront_distribution" "sac_cloudfront_distribution" {
+    # oak9: Define asset inventory tags
     # oak9: Configure a default root object
     # oak9: Configure access logs for Cloud Front
     enabled = true
