@@ -2,6 +2,7 @@
 # SecretsManager
 # ---------------------------------------------------------------------
 resource "aws_secretsmanager_secret" "sac_secrets_manager_insecure" {
+  # oak9: Define asset inventory tags
   # oak9: Use customer-managed key for at-rest encryption
   name                    = "sac-testing-secrets-manager-insecure"
   description             = "Default config2"
