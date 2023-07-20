@@ -14,6 +14,7 @@ resource "aws_kinesis_stream" "kinesis_stream" {
 }
 
 resource "aws_kinesis_stream_consumer" "kinesis_stream_consumer" {
+  # oak9: Define asset inventory tags
   name       = "foo-kinesis-consumer"
   stream_arn = aws_kinesis_stream.kinesis_stream.arn
 }
