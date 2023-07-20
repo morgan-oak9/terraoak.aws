@@ -33,7 +33,7 @@ resource "aws_s3_bucket_cors_configuration" "s3_cors_config_sac" {
 
 resource "aws_s3_bucket_policy" "s3_bucket_policy_sac" {
   bucket = aws_s3_bucket.s3_bucket_sac.id
-  policy = <<EOF
+  policy = "aws:SecureTransport : false"
 {
 "Version": "2012-10-17",
 "Id": "PutObjPolicy",
