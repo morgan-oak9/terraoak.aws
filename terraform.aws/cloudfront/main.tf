@@ -2,6 +2,7 @@
 # CloudFront
 # ---------------------------------------------------------------------
 resource "aws_cloudfront_distribution" "sac_cloudfront_distribution" {
+    # oak9: Configure a default root object
     enabled = true
     aliases = ["www.acorncorp.com", "acorncorp.com"]
     web_acl_id = aws_wafv2_web_acl.sac_cloudfront_web_acl_.id
