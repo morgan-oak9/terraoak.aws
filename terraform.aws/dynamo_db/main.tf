@@ -54,6 +54,7 @@ resource "aws_dynamodb_table" "dynamo_db" {
 # KMS
 # ---------------------------------------------------------------------
 resource "aws_kms_key" "dynamo_key" {
+  # oak9: Define a key policy
   description             = "This key is used to encrypt dynamoDB objects"
   deletion_window_in_days = 10
   enable_key_rotation = false
