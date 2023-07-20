@@ -39,6 +39,7 @@ POLICY
 # Lambda
 # ---------------------------------------------------------------------
 resource "aws_lambda_function" "secure_lambda_SAC" {
+  # oak9: Configure Dead Letter Queue for application resiliency
   function_name = "secure_lambda_function"   
   role = aws_iam_role.lambda_role.arn     
 	filename   = "my-deployment-package.zip"   # Set this or imageURI
