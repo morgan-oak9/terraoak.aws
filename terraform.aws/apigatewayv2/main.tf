@@ -17,6 +17,7 @@ resource "aws_apigatewayv2_api_mapping" "api" {
 }
 
   resource "aws_apigatewayv2_domain_name" "sac_apigwv2_domain" {
+  # oak9: Define asset inventory tags
   # oak9: Enable mutual TLS authentication
   domain_name = "acorncorp.com"
 
