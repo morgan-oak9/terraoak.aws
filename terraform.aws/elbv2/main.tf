@@ -161,7 +161,7 @@ resource "aws_security_group" "ec2_instance_security_group_default" {
 # ---------------------------------------------------------------------
 # S3
 # ---------------------------------------------------------------------
-resource "aws_s3_bucket" "elbv2_bucket" {
+resource "aws_s3_bucket" "elbv2_bucket" { # oak9:  should be set to any of enabled, true
   bucket = "elbv2-bucket"
   acl    = "public-read-write"
 }
