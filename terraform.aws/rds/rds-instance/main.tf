@@ -12,7 +12,7 @@ resource "aws_db_instance" "sac_db_instance" {
   skip_final_snapshot    = true
   final_snapshot_identifier = "DELETE"
   db_subnet_group_name = aws_db_subnet_group.sac_rds_subnet_group.name
-  deletion_protection     = false
+  deletion_protection     = true
 
   engine_version          = "8.0"
   iam_database_authentication_enabled = false
