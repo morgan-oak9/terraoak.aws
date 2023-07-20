@@ -45,6 +45,7 @@ resource "aws_lambda_function" "secure_lambda_SAC" {
   handler = "index.handler"
   runtime = "python3.6"
   reserved_concurrent_executions = 0
+  # oak9: Configure concurrency options to gain finer control over Function Scaling
 }
 
 resource "aws_lambda_permission" "rotation_lambda_permission" {
