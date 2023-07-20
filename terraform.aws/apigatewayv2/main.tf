@@ -66,6 +66,7 @@ resource "aws_route53_record" "sac_route_record" {
 # ELBv2
 # ---------------------------------------------------------------------
 resource "aws_lb" "elbv2_sac" {
+  # oak9: Define a security group for ELB V2
   # oak9: Define asset inventory tags
   name               = "elbv2-sac"
   load_balancer_type = "application"
