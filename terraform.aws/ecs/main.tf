@@ -6,6 +6,7 @@ resource "aws_ecs_cluster" "sac_ecs_cluster" {
 }
 
 resource "aws_ecs_service" "sac_ecs_service" {
+  # oak9: Define a security group for ECS Service
   # oak9: Define asset inventory tags
   name            = "sac-testing-ecs-service"
   cluster         = aws_ecs_cluster.sac_ecs_cluster.arn
