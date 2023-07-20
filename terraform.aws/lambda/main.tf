@@ -2,6 +2,7 @@
 # Lambda
 # ---------------------------------------------------------------------
 resource "aws_lambda_function" "insecure_lambda_SAC" {
+  # oak9: Route all traffic through a VPC
   function_name = "insecure_lambda_function"   
   role = aws_iam_role.lambda_role.arn     
 	filename   = "my-deployment-package.zip"  
