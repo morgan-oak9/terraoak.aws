@@ -58,6 +58,7 @@ resource "aws_api_gateway_method_settings" "sac_api_gateway_method_settings" {
 }
 
 resource "aws_api_gateway_method" "sac_api_gateway_method" {
+  # oak9: Configure request validation for API method
   rest_api_id = aws_api_gateway_rest_api.sac_api_gateway_rest_api.id
   resource_id = aws_api_gateway_resource.sac_api_gateway.id
   http_method = "GET"
