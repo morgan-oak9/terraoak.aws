@@ -147,6 +147,7 @@ POLICY
 # KMS
 # ---------------------------------------------------------------------
 resource "aws_kms_key" "sac_kms_key" {
+  # oak9: Define a key policy
   description             = "This key is used to encrypt dynamoDB objects"
   deletion_window_in_days = 10
   enable_key_rotation = true
