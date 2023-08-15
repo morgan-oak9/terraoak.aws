@@ -30,6 +30,7 @@ resource "aws_s3_bucket_ownership_controls" "s3_ownership_controls_sac" {
 resource "aws_s3_bucket_policy" "s3_bucket_policy_sac" {
   bucket = aws_s3_bucket.s3_bucket_sac.id
   policy = <<EOF
+  # oak9: Explicitly define S3 bucket actions instead of using wildcards ['*']
 {
 "Version": "2012-10-17",
 "Id": "PutObjPolicy",
