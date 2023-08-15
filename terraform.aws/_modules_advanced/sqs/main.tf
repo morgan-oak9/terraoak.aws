@@ -1,5 +1,6 @@
 
 resource "aws_sqs_queue" "sac_sqs" {
+  # oak9: Define asset inventory tags
   name                      = "sac-testing-sqs"
   kms_master_key_id         = aws_kms_key.sqs_key.id
   delay_seconds             = 90
