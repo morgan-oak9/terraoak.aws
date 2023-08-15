@@ -22,6 +22,7 @@ resource "aws_network_acl" "sac_network_acl" {
 resource "aws_vpc" "sac_vpc" {
   cidr_block = "10.1.0.0/16"
   tags = {
+    # oak9: Define asset inventory tags
     Name = "Default VPC"
   }
 }
