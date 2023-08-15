@@ -1,5 +1,6 @@
 
 resource "aws_instance" "aws_ec2_instance_sac" {
+  # oak9: Use customer-managed key for at-rest encryption
   ami = data.aws_ami.ubuntu.id
   launch_template {
     id = aws_launch_template.aws_ec2_launch_template_sac.id
