@@ -1,5 +1,6 @@
 
 resource "aws_eks_cluster" "sac_eks_cluster" {
+  # oak9: Enable secrets encryption
   name     = "sac-testing-eks-cluster"
   role_arn = aws_iam_role.eks_cluster_role.arn
   vpc_config {
