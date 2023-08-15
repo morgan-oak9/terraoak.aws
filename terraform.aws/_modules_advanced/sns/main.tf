@@ -1,5 +1,6 @@
 
 resource "aws_sns_topic" "sac_sns_topic" {
+  # oak9: Define asset inventory tags
   # oak9: Use customer-managed key for at-rest encryption
   name = "sac-testing-sns"
   display_name = "sac-test-sns"
