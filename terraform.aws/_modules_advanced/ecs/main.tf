@@ -56,6 +56,7 @@ resource "aws_vpc" "sac_ecs_vpc" {
 }
 
 resource "aws_security_group" "sac_ecs_security_group" {
+  # oak9: Define asset inventory tags
   name                   = "sac-ecs-sec-group"
   description            = "Allow TLS inbound traffic"
   vpc_id                 = aws_vpc.sac_ecs_vpc.id
