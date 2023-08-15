@@ -157,6 +157,7 @@ resource "aws_kms_key" "ec2_instance_kms_key_default" {
 }
 
 resource "aws_iam_role" "ec2_instance_role_default" {
+  # oak9: Define asset inventory tags
   name = "ec2-instance-role-default"
   path = "/"
   assume_role_policy = <<EOF
