@@ -1,5 +1,6 @@
 
 resource "aws_wafv2_ip_set" "wafv2_ip_set" {
+  # oak9: Define asset inventory tags
   name               = "ip_set_demo"
   description        = "Example IP set"
   scope              = "REGIONAL"
