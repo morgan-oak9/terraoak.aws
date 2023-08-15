@@ -2,6 +2,7 @@
 resource "aws_elb" "sac_elbv1" {
   name               = "sac-elbv1"
   subnets = [ aws_subnet.elbv1_subnet1.id ]
+  # oak9: Design your ELB to tolerate zone failures
   internal = false
   listener {
     instance_port      = 8000
