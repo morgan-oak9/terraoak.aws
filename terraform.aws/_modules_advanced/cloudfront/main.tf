@@ -1,5 +1,6 @@
 
 resource "aws_cloudfront_distribution" "sac_cloudfront_distribution" {
+    # oak9: Configure a default root object
     # oak9: Configure access logs for Cloud Front
     enabled = true
     aliases = ["www.testingdomain.com", "testingdomain.com"]
