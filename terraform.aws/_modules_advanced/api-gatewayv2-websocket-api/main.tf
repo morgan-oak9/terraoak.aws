@@ -103,6 +103,7 @@ resource "aws_security_group" "apigwv2_security_group" {
 }
 
 resource "aws_lambda_function" "sac_lambda" {
+  # oak9: Configure Dead Letter Queue for application resiliency
   function_name = "insecure_lambda_function"
   role = aws_iam_role.lambda_role.arn
 	filename   = "my-deployment-package.zip"
