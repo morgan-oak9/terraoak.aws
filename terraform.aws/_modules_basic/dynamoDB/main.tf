@@ -6,7 +6,7 @@ resource "aws_dynamodb_table" "dynamo-db-table" {
   range_key                   = "GameTitle"
   read_capacity               = 1
   write_capacity              = 1
-  deletion_protection_enabled = false
+  deletion_protection_enabled = true
   attribute {
     name = "UserId"
     type = "S"
