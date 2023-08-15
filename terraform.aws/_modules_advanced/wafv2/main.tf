@@ -73,6 +73,7 @@ resource "aws_wafv2_web_acl" "wafv2_web_acl" {
 }
 
 resource "aws_wafv2_regex_pattern_set" "example" {
+  # oak9: Define asset inventory tags
   name        = "example"
   description = "Example regex pattern set"
   scope       = "REGIONAL"
