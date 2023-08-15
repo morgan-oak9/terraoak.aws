@@ -36,6 +36,7 @@ resource "aws_wafv2_rule_group" "wafv2_rule_demo" {
 }
 
 resource "aws_wafv2_web_acl" "wafv2_web_acl" {
+  # oak9: Use "AWSManagedRulesCommonRuleSet" managed rules
   name        = "managed-rule-example"
   description = "Example of a managed rule."
   scope       = "REGIONAL"
