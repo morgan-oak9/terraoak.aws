@@ -25,5 +25,6 @@ resource "aws_security_group" "sac_security_group" {
     protocol        = "tcp"
     cidr_blocks      = ["0.0.0.0/0"]
     ipv6_cidr_blocks = ["::/0"]
+  # oak9: Explicitly define destination IP addresses for egress rules
   }
 }
