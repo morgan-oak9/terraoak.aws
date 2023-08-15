@@ -42,6 +42,7 @@ resource "aws_cloudfront_origin_access_identity" "origin_access_identity" {
 }
 
 resource "aws_s3_bucket" "sac_cloudfront_log_bucket" {
+  # oak9: Use s3.bucket.public_access_block_configuration to control S3 bucket public access instead of Canned Access Control Lists (ACLs)
   bucket = "sac-cloudfront-bucket"
   acl = "private"
   tags = {
