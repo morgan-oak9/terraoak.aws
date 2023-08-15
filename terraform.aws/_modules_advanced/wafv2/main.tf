@@ -8,6 +8,7 @@ resource "aws_wafv2_ip_set" "wafv2_ip_set" {
 }
 
 resource "aws_wafv2_rule_group" "wafv2_rule_demo" {
+  # oak9: Define asset inventory tags
   # oak9: Define a Rate limit rule
   name     = "wafv2_rule_demo"
   scope    = "REGIONAL"
