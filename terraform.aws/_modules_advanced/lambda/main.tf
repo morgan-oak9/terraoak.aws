@@ -27,7 +27,7 @@ resource "aws_lambda_function" "insecure_lambda_SAC" {
   role = aws_iam_role.lambda_role.arn
 	filename   = "my-deployment-package.zip"
   handler = "index.handler"
-  runtime = "dotnetcore3.1"
+  runtime = "dotnet6"
   reserved_concurrent_executions = 0
   //kms_key_arn = aws_kms_key.foo_lambda.arn
   layers = [aws_lambda_layer_version.lambda_layer.arn]
