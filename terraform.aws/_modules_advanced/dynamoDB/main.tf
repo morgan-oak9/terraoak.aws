@@ -1,5 +1,6 @@
 
 resource "aws_dynamodb_table" "dynamo-db-" {
+  # oak9: Define asset inventory tags
   name           = "foo"
   billing_mode   = "PROVISIONED"
   hash_key       = "UserId"
