@@ -66,6 +66,7 @@ resource "aws_subnet" "ec2_instance_subnet" {
 }
 
 resource "aws_vpc" "ec2_instance_vpc" {
+  # oak9: Define asset inventory tags
   cidr_block = "10.0.0.0/16"
 }
 
