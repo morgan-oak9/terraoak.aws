@@ -18,6 +18,7 @@ resource "aws_security_group" "sac_security_group" {
     protocol         = "tcp"
     cidr_blocks      = ["0.0.0.0/0"]
     ipv6_cidr_blocks = ["::/0"]
+  # oak9: Explicitly define source IP addresses for ingress rules
   }
   egress {
     from_port       = 80
