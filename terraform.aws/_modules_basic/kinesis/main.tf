@@ -10,5 +10,5 @@ resource "aws_kinesis_stream" "sac_kinesis_stream" {
   stream_mode_details {
     stream_mode = "PROVISIONED"
   }
-  encryption_type = "NONE"
+  encryption_type = "kms"
 }
