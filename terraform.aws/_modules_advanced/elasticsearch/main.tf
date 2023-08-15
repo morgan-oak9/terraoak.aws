@@ -16,7 +16,7 @@ resource "aws_elasticsearch_domain" "sac_elasticsearch_domain" {
   }
   cluster_config {
     instance_type = "c6g.large.elasticsearch"
-    zone_awareness_enabled = false
+    zone_awareness_enabled = true
     instance_count = 2
   }
   encrypt_at_rest {
