@@ -32,6 +32,7 @@ resource "aws_elasticsearch_domain" "sac_elasticsearch_domain" {
 }
 
 resource "aws_kms_key" "elasticsearch_key" {
+  # oak9: Define a key policy
   description             = "elasticsearch-key"
   deletion_window_in_days = 10
 }
