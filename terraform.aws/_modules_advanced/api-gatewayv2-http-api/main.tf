@@ -1,5 +1,6 @@
 
 resource "aws_apigatewayv2_api" "sac_apigwv2_api" {
+  # oak9: Define asset inventory tags
   name          = "sac-testing-apigwv2-api"
   protocol_type = "HTTP"
   cors_configuration {
