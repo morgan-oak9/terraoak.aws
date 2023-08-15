@@ -22,6 +22,7 @@ resource "aws_elasticache_cluster" "sac_redis_cluster" {
 }
 
 resource "aws_elasticache_replication_group" "sac_replication_group_redis" {
+  # oak9: Define a security group for ElastiCache Replication Group
   # oak9: Define asset inventory tags
   preferred_cache_cluster_azs = ["us-east-2b", "us-east-2c"]
   replication_group_id        = "sac-testing-replication-group-redis"
