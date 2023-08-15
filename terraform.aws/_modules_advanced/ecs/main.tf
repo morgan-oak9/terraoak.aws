@@ -1,5 +1,6 @@
 
 resource "aws_ecs_cluster" "sac_ecs_cluster" {
+  # oak9: Define asset inventory tags
   name = "sac-testing-ecs-cluster"
 }
 
