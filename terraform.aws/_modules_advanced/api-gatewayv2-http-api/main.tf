@@ -13,6 +13,7 @@ resource "aws_apigatewayv2_api_mapping" "api" {
   stage       = aws_apigatewayv2_stage.sac_apigwv2_stage.id
 }
   resource "aws_apigatewayv2_domain_name" "sac_apigwv2_domain" {
+  # oak9: Enable mutual TLS authentication
   domain_name = "testingdomain.com"
   domain_name_configuration {
     certificate_arn = "acm-cert-arn"
