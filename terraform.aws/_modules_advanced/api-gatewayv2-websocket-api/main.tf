@@ -112,6 +112,7 @@ resource "aws_lambda_function" "sac_lambda" {
 }
 
 resource "aws_iam_role" "lambda_role" {
+    # oak9: Define asset inventory tags
     name = "lambda_role"
     assume_role_policy = <<EOF
 {
