@@ -1,5 +1,6 @@
 
 resource "aws_elasticsearch_domain" "sac_elasticsearch_domain" {
+  # oak9: Use customer-managed key for at-rest encryption
   domain_name           = "sac-testing-elasticsearch"
   elasticsearch_version = "7.10"
   advanced_security_options {
