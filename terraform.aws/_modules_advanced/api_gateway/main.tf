@@ -86,6 +86,7 @@ resource "aws_lambda_function" "sac_api_gateway_lambda_function" {
 }
 
 resource "aws_iam_role" "sac_api_gateway_role" {
+  # oak9: Define asset inventory tags
   name = "sac-testing-apigw-cloudwatch-role"
   assume_role_policy = <<EOF
 {
