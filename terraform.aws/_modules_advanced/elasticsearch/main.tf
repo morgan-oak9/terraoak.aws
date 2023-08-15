@@ -27,7 +27,7 @@ resource "aws_elasticsearch_domain" "sac_elasticsearch_domain" {
     tls_security_policy = "Policy-Min-TLS-1-0-2019-07"
   }
   node_to_node_encryption {
-    enabled = false
+    enabled = true
   }
 }
 
