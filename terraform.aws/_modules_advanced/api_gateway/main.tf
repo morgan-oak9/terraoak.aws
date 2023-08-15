@@ -61,6 +61,7 @@ resource "aws_api_gateway_rest_api" "sac_api_gateway_rest_api" {
 }
 
 resource "aws_api_gateway_usage_plan" "sac_api_gateway_usage_plan" {
+  # oak9: Define asset inventory tags
   name         = "sac-testing-apigw-usage-plan"
   api_stages {
     api_id = aws_api_gateway_rest_api.sac_api_gateway_rest_api.id
