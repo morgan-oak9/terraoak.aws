@@ -1,5 +1,6 @@
 
 resource "aws_elb" "sac_elbv1" {
+  # oak9: Configure access logs for ELB
   name               = "sac-elbv1"
   subnets = [ aws_subnet.elbv1_subnet1.id ]
   internal = false
