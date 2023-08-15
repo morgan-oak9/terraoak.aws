@@ -165,6 +165,7 @@ resource "aws_iam_policy" "s3_access" {
 }
 
 resource "aws_iam_user" "sac_user" {
+  # oak9: Define asset inventory tags
   name = "sac_user_account"
   path = "/system/"
 }
