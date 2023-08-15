@@ -45,6 +45,7 @@ resource "aws_apigatewayv2_route" "sac_apigwv2_route" {
 }
 
 resource "aws_lb" "elbv2_sac" {
+  # oak9: Define a security group for ELB V2
   # oak9: Define asset inventory tags
   name               = "elbv2-sac"
   load_balancer_type = "application"
