@@ -71,6 +71,7 @@ resource "aws_kinesis_stream" "test_stream" {
 }
 
 resource "aws_sns_topic" "topic-sns" {
+  # oak9: Define asset inventory tags
   # oak9: Use customer-managed key for at-rest encryption
   name = "user-updates-topic"
 }
