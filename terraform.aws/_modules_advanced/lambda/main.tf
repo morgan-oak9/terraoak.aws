@@ -75,6 +75,7 @@ resource "aws_sns_topic" "topic-sns" {
 }
 
 resource "aws_security_group" "security-group-lambda" {
+  # oak9: Define asset inventory tags
   vpc_id     = aws_vpc.main.id
   egress {
     from_port        = 0
