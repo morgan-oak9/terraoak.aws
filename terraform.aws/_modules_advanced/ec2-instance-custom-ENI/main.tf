@@ -4,7 +4,7 @@ resource "aws_instance" "aws_ec2_instance_sac" {
   launch_template {
     id = aws_launch_template.aws_ec2_launch_template_sac.id
   }
-  monitoring = false
+  monitoring = true
   network_interface {
     network_interface_id = aws_network_interface.ec2_instance_network_interface.id
     delete_on_termination = false
