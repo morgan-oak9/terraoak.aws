@@ -23,6 +23,7 @@ resource "aws_elb" "sac_elbv1" {
 }
 
 resource "aws_security_group" "elbv1_security_group" {
+  # oak9: Define asset inventory tags
   name                   = "elbv1-security-group"
   description            = "Allow TLS inbound traffic"
   vpc_id                 = aws_vpc.elbv1_vpc.id
