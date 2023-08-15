@@ -4,6 +4,7 @@ resource "aws_apigatewayv2_api" "sac_apigwv2_api" {
   protocol_type = "HTTP"
   cors_configuration {
     allow_methods = ["*"]
+  # oak9: CORS configuration is allowing ['*'] requests
   }
 }
 
