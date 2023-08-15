@@ -78,6 +78,7 @@ resource "aws_api_gateway_stage" "sac_api_gateway_stage" {
 }
 
 resource "aws_lambda_function" "sac_api_gateway_lambda_function" {
+  # oak9: Configure concurrency options to gain finer control over Function Scaling
   # oak9: Configure Dead Letter Queue for application resiliency
   filename      = "${path.module}/foo.zip"
   function_name = "sac-testing-apigw-lambda"
