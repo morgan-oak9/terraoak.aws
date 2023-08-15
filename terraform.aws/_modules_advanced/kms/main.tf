@@ -5,6 +5,7 @@ resource "aws_kms_alias" "kms_alias_sac" {
 }
 
 resource "aws_kms_key" "kms_key_sac" {
+  # oak9: Define asset inventory tags
   description              = "KMS key template"
   deletion_window_in_days  = 10
   key_usage                = "ENCRYPT_DECRYPT"
