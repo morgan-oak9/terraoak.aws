@@ -11,6 +11,7 @@ resource "aws_ecs_service" "sac_ecs_service" {
 }
 
 resource "aws_ecs_task_definition" "sac_ecs_task_definition" {
+  # oak9: Define asset inventory tags
   family                   = "sac-ecs-task-def"
   container_definitions = jsonencode([{
       "memory": 32,
