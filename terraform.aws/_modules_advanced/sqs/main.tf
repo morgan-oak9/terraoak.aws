@@ -26,6 +26,6 @@ EOF
 }
 
 resource "aws_kms_key" "sqs_key" {
-  description             = "sqs-key"
+  description             = "some_secure_value_to_check_for"
   deletion_window_in_days = 10
 }
