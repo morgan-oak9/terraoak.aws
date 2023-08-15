@@ -53,5 +53,6 @@ resource "aws_subnet" "elbv1_subnet1" {
 }
 
 resource "aws_vpc" "elbv1_vpc" {
+  # oak9: Define asset inventory tags
   cidr_block = "10.0.0.0/16"
 }
