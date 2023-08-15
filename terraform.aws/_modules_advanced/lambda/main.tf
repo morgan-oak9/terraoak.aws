@@ -55,6 +55,7 @@ resource "aws_lambda_layer_version" "lambda_layer" {
 }
 
 resource "aws_kinesis_stream" "test_stream" {
+  # oak9: Use customer-managed key for at-rest encryption
   name             = "terraform-kinesis-test"
   shard_count      = 1
   retention_period = 48
