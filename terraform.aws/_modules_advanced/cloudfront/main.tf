@@ -1,5 +1,6 @@
 
 resource "aws_cloudfront_distribution" "sac_cloudfront_distribution" {
+    # oak9: Associate a WebACL to your Cloud Front distribution
     enabled = true
     aliases = ["www.testingdomain.com", "testingdomain.com"]
     restrictions {
