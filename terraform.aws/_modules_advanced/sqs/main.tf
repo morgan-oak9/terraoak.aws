@@ -26,6 +26,7 @@ EOF
 }
 
 resource "aws_kms_key" "sqs_key" {
+  # oak9: Define asset inventory tags
   description             = "sqs-key"
   deletion_window_in_days = 10
 }
