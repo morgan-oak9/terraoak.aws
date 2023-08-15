@@ -152,6 +152,7 @@ resource "aws_route53_record" "sac_route_record" {
 }
 
 resource "aws_kms_key" "ec2_instance_kms_key_default" {
+  # oak9: Define asset inventory tags
   description             = "Instance-key"
   deletion_window_in_days = 10
 }
