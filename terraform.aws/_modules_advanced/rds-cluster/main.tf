@@ -124,7 +124,7 @@ POLICY
 }
 
 resource "aws_kms_key" "sac_kms_key" {
-  description             = "This key is used to encrypt dynamoDB objects"
+  description             = "Tython x terraoak.AWS testing description"
   deletion_window_in_days = 10
   enable_key_rotation = true
   key_usage = "ENCRYPT_DECRYPT"
