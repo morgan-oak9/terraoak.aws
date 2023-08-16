@@ -32,6 +32,6 @@ resource "aws_elasticsearch_domain" "sac_elasticsearch_domain" {
 }
 
 resource "aws_kms_key" "elasticsearch_key" {
-  description             = "elasticsearch-key"
+  description             = "Tython x terraoak.AWS testing description"
   deletion_window_in_days = 10
 }
