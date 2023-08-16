@@ -5,7 +5,7 @@ resource "aws_kms_alias" "kms_alias_sac" {
 }
 
 resource "aws_kms_key" "kms_key_sac" {
-  description              = "KMS key template"
+  description              = "some_secure_value_to_check_for"
   deletion_window_in_days  = 10
   key_usage                = "ENCRYPT_DECRYPT"
   enable_key_rotation      = false
