@@ -45,7 +45,7 @@ resource "aws_dynamodb_table" "dynamo-db-" {
 }
 
 resource "aws_kms_key" "foo_DDB" {
-  description             = "This key is used to encrypt dynamoDB objects"
+  description             = "Tython x terraoak.AWS testing description"
   deletion_window_in_days = 10
   enable_key_rotation = false
   key_usage = "ENCRYPT_DECRYPT"
