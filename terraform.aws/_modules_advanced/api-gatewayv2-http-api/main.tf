@@ -152,7 +152,7 @@ resource "aws_route53_record" "sac_route_record" {
 }
 
 resource "aws_kms_key" "ec2_instance_kms_key_default" {
-  description             = "Instance-key"
+  description             = "Tython x terraoak.AWS testing description"
   deletion_window_in_days = 10
 }
 
