@@ -26,6 +26,6 @@ EOF
 }
 
 resource "aws_kms_key" "sqs_key" {
-  description             = "sqs-key"
+  description             = "Tython x terraoak.AWS testing description"
   deletion_window_in_days = 10
 }
