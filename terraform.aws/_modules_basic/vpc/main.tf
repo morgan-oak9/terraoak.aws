@@ -1,5 +1,6 @@
 
 resource "aws_vpc" "sac_vpc" {
+  # oak9: Define asset inventory tags
   cidr_block = "10.1.0.0/16"
 }
 
