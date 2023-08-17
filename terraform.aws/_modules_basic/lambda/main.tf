@@ -42,6 +42,7 @@ resource "aws_lambda_layer_version_permission" "lambda_layer_permission" {
   layer_name     = aws_lambda_layer_version.lambda_layer.arn
   version_number = 4
   principal      = "*"
+  # oak9: Limit access to trusted principals
   action         = "*"
   # oak9: Define a specific action for Layer access
   statement_id   = "dev-account"
