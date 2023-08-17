@@ -10,7 +10,7 @@ resource "aws_instance" "aws_ec2_instance_sac_default" {
   ebs_block_device {
     delete_on_termination = false
     device_name           = "/dev/sdf"
-    encrypted             = false
+    encrypted             = true
     volume_size = 5
     tags = {
       "key" = "value"
