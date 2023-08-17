@@ -10,6 +10,7 @@ resource "aws_rds_cluster" "sac_rds_cluster" {
   deletion_protection       = false
   db_subnet_group_name      = aws_db_subnet_group.sac_rds_subnet_group.name
   backup_retention_period   = 7
+  # oak9: Configure backup retention period
   engine_version            = "8.0.mysql_aurora.3.03.0"
   storage_encrypted                   = false
   iam_database_authentication_enabled = false
