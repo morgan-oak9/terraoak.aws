@@ -6,7 +6,7 @@ resource "aws_instance" "aws_ec2_instance_sac_default" {
     id = aws_launch_template.aws_ec2_launch_template_sac_default.id
   }
   associate_public_ip_address = true
-  monitoring = false
+  monitoring = true
   ebs_block_device {
     delete_on_termination = false
     device_name           = "/dev/sdf"
