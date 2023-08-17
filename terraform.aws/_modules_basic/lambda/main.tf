@@ -29,6 +29,7 @@ resource "aws_lambda_function" "insecure_lambda_SAC" {
   handler                        = "index.handler"
   runtime                        = "dotnetcore3.1"
   reserved_concurrent_executions = 0
+  # oak9: Configure concurrency options to gain finer control over Function Scaling
   layers = [aws_lambda_layer_version.lambda_layer.arn]
 }
 
