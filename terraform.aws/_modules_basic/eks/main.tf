@@ -7,6 +7,7 @@ resource "aws_eks_cluster" "sac_eks_cluster" {
     subnet_ids             = [aws_subnet.eks_subnet_1.id, aws_subnet.eks_subnet_2.id]
     endpoint_public_access = true
     public_access_cidrs    = ["0.0.0.0/0"]
+  # oak9: Explicitly define trusted IP addresses
   }
   depends_on = [
     aws_iam_role_policy_attachment.demo-cluster-AmazonEKSClusterPolicy,
