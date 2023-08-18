@@ -1,5 +1,6 @@
 
 resource "aws_instance" "aws_ec2_instance_sac_default" {
+  # oak9: Define asset inventory tags
   # oak9: Use customer-managed key for at-rest encryption
   ami       = data.aws_ami.ubuntu.id
   subnet_id = aws_subnet.ec2_instance_subnet_default.id
