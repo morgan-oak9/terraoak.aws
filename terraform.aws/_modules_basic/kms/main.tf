@@ -8,7 +8,7 @@ resource "aws_kms_key" "kms_key_sac" {
   description             = "KMS key template"
   deletion_window_in_days = 30
   key_usage               = "ENCRYPT_DECRYPT"
-  enable_key_rotation     = false
+  enable_key_rotation     = true
   is_enabled              = true
   policy = <<EOF
 {
