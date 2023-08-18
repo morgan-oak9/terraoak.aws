@@ -1,5 +1,6 @@
 
 resource "aws_sqs_queue" "sac_sqs" {
+  # oak9: Use customer-managed key for at-rest encryption
   name = "sac-testing-sqs"
   delay_seconds             = 90
   max_message_size          = 2048
