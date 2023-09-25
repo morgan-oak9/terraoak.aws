@@ -8,6 +8,7 @@ resource "aws_secretsmanager_secret_rotation" "secrets_manager_rotation" {
 }
 
 resource "aws_secretsmanager_secret" "sac_secrets_manager_insecure" {
+  # oak9: Use customer-managed key for at-rest encryption
   # oak9: Define asset inventory tags
   name        = "sac-testing-secrets-manager-insecure"
   description = "Default config2"
