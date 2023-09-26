@@ -21,7 +21,7 @@ resource "aws_elasticsearch_domain" "sac_elasticsearch_domain" {
     instance_count         = 2
   }
   encrypt_at_rest {
-    enabled = false
+    enabled = true
   }
   domain_endpoint_options {
     enforce_https       = false
