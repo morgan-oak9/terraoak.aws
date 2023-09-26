@@ -23,12 +23,15 @@ resource "aws_lambda_event_source_mapping" "example" {
 }
 
 resource "aws_lambda_function" "insecure_lambda_SAC" {
+  # oak9: Route all traffic through a VPC
+  # oak9: Configure Dead Letter Queue for application resiliency
   function_name                  = "insecure_lambda_function"
   role                           = aws_iam_role.lambda_role.arn
   filename                       = "my-deployment-package.zip"
   handler                        = "index.handler"
   runtime                        = "dotnetcore3.1"
   reserved_concurrent_executions = 0
+  # oak9: Configure concurrency options to gain finer control over Function Scaling
   layers = [aws_lambda_layer_version.lambda_layer.arn]
 }
 
